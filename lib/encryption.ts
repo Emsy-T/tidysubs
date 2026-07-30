@@ -1,8 +1,5 @@
 import crypto from 'node:crypto';
 
-// 32-byte key required for AES-256 — generate once with:
-// node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
-// then store as ENCRYPTION_KEY in .env.local (never commit it)
 const ALGORITHM = 'aes-256-gcm';
 const KEY = Buffer.from(process.env.ENCRYPTION_KEY!, 'hex');
 
